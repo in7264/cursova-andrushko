@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>СТО Облік</title>
+    </head>
+    <body>
+        <header>
+            <h1>Назва вашої фірми</h1>
+        </header>
+
+        <main>
+            <button onclick="openForm()">Створити новий ремонт</button>
+
+            <div id="repairForm" class="form-popup">
+                <form id="myForm" onsubmit="saveRepair(event)">
+                    <label for="make">Марка авто:</label>
+                    <input type="text" id="make" required>
+
+                    <label for="model">Модель:</label>
+                    <input type="text" id="model" required>
+
+                    <label for="licensePlate">Номер машини:</label>
+                    <input type="text" id="licensePlate" required>
+
+                    <label for="issue">Опис проблеми:</label>
+                    <textarea id="issue" required></textarea>
+
+                    <button type="submit">Зберегти ремонт</button>
+                    <button type="button" onclick="closeForm()">Закрити</button>
+                </form>
+            </div>
+
+            <h2>Список ремонтів</h2>
+            <table id="repairTable">
+                <thead>
+                    <tr>
+                        <th>Марка авто</th>
+                        <th>Модель</th>
+                        <th>Номер машини</th>
+                        <th>Опис проблеми</th>
+                        <th>Дата створення</th>
+                        <th>Замітки</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="repairTableBody">
+                    <!-- Сюди буде вставлений код для виведення даних про ремонти -->
+                </tbody>
+            </table>
+
+            <!-- Новий блок для виведення та редагування даних під час перегляду деталей -->
+            <div id="detailsBlock" class="form-popup">
+                <h2>Деталі ремонту</h2>
+
+                <p>Марка авто</p><input type="text" id="makeDetail" placeholder="Марка авто">
+                <p>Модель</p><input type="text" id="modelDetail" placeholder="Модель">
+                <p>Номер машини</p><input type="text" id="licensePlateDetail" placeholder="Номер машини">
+                <p>Опис проблеми</p><textarea id="issueDetail" placeholder="Опис проблеми"></textarea>
+                <p>Дата створення</p><textarea id="dataDetail" placeholder="Дата створення"></textarea>
+                <p>Замітки</p><textarea id="notesDetail" placeholder="Замітки"></textarea>
+
+                <button onclick="saveNotes()">Зберегти замітки</button>
+                <button onclick="closeDetails()">Закрити</button>
+            
+                <!-- Додайте відповідні input елементи для редагування деталей -->
+
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

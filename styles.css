@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Стилізація таблиць */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Стилізація блоку деталей */
+#detailsBlock {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    overflow-y: auto; /* Додайте цю властивість */
+}
+
+#detailsBlock h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#detailsBlock p {
+    margin: 5px 0;
+}
+
+#detailsBlock input[type="text"],
+#detailsBlock textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#detailsBlock button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#detailsBlock button:hover {
+    background-color: #45a049;
+}
